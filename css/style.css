@@ -1,0 +1,1099 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+select,
+input{
+    border-radius: 4px;
+    border: none;
+}
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
+.nav{
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222222;
+}
+.nav .logo{
+    width: 150px;
+    cursor: pointer;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation li{
+    margin-right: 35px;
+}
+.navigation li a{
+    color: #ffffff;
+}
+.navigation li:last-child{
+    margin-right: 0;
+}
+.navigation li:last-child a{
+    padding: 10px 20px;
+    background: rgb(212, 105, 29);
+    border: 1px solid rgb(212, 105, 29);
+    border-radius: 50px;
+    transition: .5s;
+}
+.navigation li:last-child a:hover{
+    color: rgb(212, 105, 29);
+    background: transparent;
+}
+
+.navigation li:nth-child(1) a,
+.navigation li:nth-child(2) a,
+.navigation li:nth-child(3) a{
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+.navigation li:nth-child(1) a:hover,
+.navigation li:nth-child(2) a:hover,
+.navigation li:nth-child(3) a:hover{
+    padding: 10px 0;
+    color: rgb(212, 105, 29);
+    border-bottom: 2px solid rgb(212, 105, 29);
+}
+.fa-bars{
+    display: none;
+}
+.navigation-sidebar{
+    display: none;
+}
+
+
+.info{
+    height: 90vh;
+    background: url(./../images/Road-Trip.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.dark{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 100px;
+}
+.dark .form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin-top: 7rem;
+}
+.form .date{
+    width: 30%;
+    height: 30px;
+}
+.form button{
+    background: rgb(212, 105, 29);
+    border: 2px solid rgb(212, 105, 29);
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+label{
+    color: #ffffff;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.date{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+.date-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+.date-1 p{
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+.date-1 input{
+    width: 80px;
+    margin-left: 10px;
+    height: 40px;
+    padding-left: 15px;
+    color: #918f8f;
+}
+label input{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    margin-left: 25px;
+    padding-left: 20px;
+}
+.form select{
+    width: 90%;
+    height: 50px;
+    font-size: 1.2rem;
+    color: #918f8f;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.form button:hover{
+    background: transparent;
+    border-color: rgb(212, 105, 29);
+    color: rgb(212, 105, 29);
+}
+.block-info-open{
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    display: none;
+    transition: .5s;
+    transition-delay: .5s;
+}
+.block-info-open.active{
+    opacity: 1;
+    display: flex;
+    transition: .5s;
+    transition-delay: .5s;
+}
+.block-info-open div{
+    width: 250px;
+    height: 250px;
+    background: rgb(212, 105, 29);
+    margin-top: 2rem;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.randomNumber{
+    color: #fff;
+}
+.header-info{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+.header-info.active{
+    display: none;
+}
+
+
+
+.trust{
+    padding: 30px 100px;
+}
+.search-head{
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.seat h1,
+.search-head,
+.trust h1{
+    text-align: center;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.seat h1::before,
+.search-head::before,
+.trust h1::before{
+    content: "";
+    width: 150px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 160%;
+    background: rgb(212, 105, 29);
+}
+.trust-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.trust-cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.trust-cards:nth-child(1){
+    margin-right: 2.5rem;
+}
+.trust-card-1{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+}
+.trust-card-1:last-child{
+    margin-bottom: 4rem;
+}
+.trust-card-1 svg{
+    color: rgb(212, 105, 29);
+    font-size: 5rem;
+    margin-right: 2rem;
+    width: 120px !important;
+}
+.trust-card-1 p{
+    font-size: 1rem;
+    transition: .5s;
+    text-align: center;
+}
+.trust-card-1:hover p{
+    color: rgb(212, 105, 29);
+}
+
+
+.search{
+    position: relative;
+    background: url(./../images/aircrafts/96-963589_airbus-a320-wallpaper-airbus-a320-wallpaper-hd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 125vh;
+}
+.search .dark{
+    padding: 60px 100px;
+    display: block;
+}
+.cards-search{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+.card-search{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.inputs input{
+    width: 40%;
+    padding-left: 15px;
+    height: 40px;
+    margin: auto;
+    font-size: 1.2rem;
+}
+.date-head{
+    color: #ffffff;
+    padding: 30px 0;
+}
+.col{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    align-items: center;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+.col input{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    padding-left: 20px;
+    color: #918f8f;
+    margin-left: 1.5rem;
+}
+.btn-mess,
+.btn-card,
+.btn-search{
+    margin-top: 25px;
+    width: 250px;
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    background: rgb(212, 105, 29);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn-search svg{
+    margin-left: 15px;
+}
+.btn-mess:hover,
+.btn-card:hover,
+.btn-search:hover{
+    background: transparent;
+    border: 1px solid rgb(212, 105, 29);
+    color: rgb(212, 105, 29);
+}
+.card-search-1{
+    display: flex;
+}
+.card-search-1 div{
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    margin: 15px;
+}
+.card-search-1 div:hover{
+    color: #ffffff;
+    background: rgb(212, 105, 29);
+}
+
+.card-search:nth-child(2) h2{
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+
+.stock{
+    display: flex;
+    flex-direction: column;
+    padding:0 100px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.card:nth-child(1){
+    margin-top: 5rem;
+}
+.image{
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+    transition: .5s;
+}
+.image:hover img{
+    transform: scale(1.1);
+}
+.card-1-head{
+    width: 50%;
+    text-align: center;
+}
+.card-1-head h1{
+    margin-bottom: 1rem;
+}
+.card-1-head p{
+    font-style: italic;
+}
+.btn-card{
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+
+
+.message{
+    background: #222222;
+    padding: 50px 100px;
+}
+.message div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message input{
+    margin-right: 30px;
+    width: 300px;
+    height: 50px;
+    padding-left: 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+}
+.btn-mess{
+    margin: 0;
+}
+.head-mess{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+
+.footer{
+    background: #222222;
+    display: flex;
+    padding: 50px 100px;
+    justify-content: space-between;
+}
+.footer ul{
+    display: flex;
+}
+.footer ul li a{
+    color: #ffffff;
+    transition: .5s;
+    margin-right: 40px;
+    font-size: 1rem;
+}
+.footer ul li a:hover{
+    color: rgb(212, 105, 29);
+}
+.phone{
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.phone:hover{
+    color: rgb(212, 105, 29);
+}
+
+
+
+@media (max-width: 1150px){
+    .card{
+        flex-direction: column;
+    }
+    .card:nth-child(2),
+    .card:nth-child(4){
+        flex-direction: column-reverse;
+    }
+    .card .image{
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1100px){
+    .card-search:nth-child(2){
+        display: none;
+    }
+    .info .dark{
+        justify-content: center;
+        width: 100%;
+    }
+    .info .dark label{
+        width: 100%;
+    }
+    .header-info,
+    .info .block-info-open{
+        display: none;
+    }
+
+
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .footer .footer-nav{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .footer .footer-nav li{
+        margin-bottom: 15px;
+    }
+    .footer .footer-nav a{
+        margin: 0;
+        padding: 0;
+    }
+    .phone{
+        margin: 0;
+        padding: 0;
+    }
+}
+.fa-times{
+    display: none;
+}
+@media (max-width: 950px){
+    .navigation-sidebar{
+        flex-direction: column;
+        position: fixed;
+        top: -1000%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        background-color: #222222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 40px;
+        transition: .5s;
+    }
+    .navigation{
+        display: none;
+    }
+    .fa-bars{
+        font-size: 2rem;
+        color: #ffffff;
+        display: block;
+        cursor: pointer;
+    }
+    .navigation-sidebar.active{
+        bottom: 0;
+        top: 0;
+    }
+    .fa-times{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .navigation-sidebar a{
+        position: relative;
+        color: #ffffff;
+        background: rgb(212, 105, 29);
+        padding: 10px 30px;   
+        border-radius: 30px;
+        margin: 20px;
+        transition: .5s;
+        border: 1px solid transparent;
+    }
+    .navigation-sidebar li{
+        margin: 20px;
+    }
+    .navigation-sidebar a:hover{
+        background: transparent;
+        color: rgb(212, 105, 29);
+        border: 1px solid rgb(212, 105, 29);
+    }
+    .navigation li{
+         line-height: 10px;
+         margin: 0;
+         padding: 0;
+    }
+}
+
+@media (max-width: 750px){  
+    .trust-content{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px){
+    .inputs{
+        flex-direction: column;
+    }
+    .info .dark select,
+    .form{
+        width: 100%;
+    }
+    .inputs input{
+        width: 100%;
+        margin-top: 15px;
+    }
+    select{
+        width: 100%;
+    }
+    .date{
+        flex-direction: column;
+        width: 100%;
+    }
+    .info .dark{
+        width: 100%;
+    }
+    .date-1{
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    .search .date input{
+        width: 100%;
+    }
+    .search{
+        height: 170vh;
+    }
+    .dark .form{
+        width: 100%;
+    }
+    .form .date{
+        width: 100%;
+    }
+
+
+    .message div{
+        flex-direction: column;
+        width: 100%;
+    }
+    .message div button,
+    .message div input{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        margin-top: 10px;
+        padding: 0;
+    }
+
+
+    .card-1-head{
+        width: 100%;
+    }
+}
+
+@media (max-width: 410px){
+    .search{
+        height: 180vh;
+    }
+     .date input{
+        width: 60%;
+    }
+}
+
+
+
+
+
+
+
+
+.profile{
+    padding: 50px 100px;
+}
+.profile-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.prof-head{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+.prof-head{
+    font-size: 2rem;
+}
+.prof-head h3:nth-child(1){
+    margin-right: 20px;
+}
+.logo-prof{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid rgb(212, 105, 29);
+    overflow: hidden;
+}
+.logo-prof img{
+    width: 100%;
+    height: 100%;
+}
+.test-3-logout{
+    padding: 10px 40px;
+    border-radius: 30px;
+    background: #D4691D;
+    border: 2px solid transparent;
+    color: #ffffff;
+    transition: .5s;
+}
+.test-3-logout:hover{
+    border: 2px solid rgb(212, 105, 29);
+    background: transparent;
+    color: rgb(212, 105, 29);
+}
+.card-profile{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    border: 3px solid rgb(212, 105, 29);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .5s;
+    margin: 15px;
+}
+.card-profile:hover{
+    color: #ffffff;
+    background: rgb(212, 105, 29);
+}
+.card-profile div{
+    display: flex;
+    margin-top: 15px;
+    width: 90%;
+    justify-content: space-between;
+}
+.card-profile div p:nth-child(2){
+    font-weight: bold;
+    margin-left: 15px;
+}
+.cards-profile{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.test-3-num{
+    margin-top: 15px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1200px){  
+    .profile-head{
+        flex-direction: column;
+    }
+    .prof-head{
+        width: 100%;
+        justify-content: center;
+    }
+    .exit{
+        margin-top: 10px;
+    }
+}
+@media (max-width: 860px){  
+    .card-profile{
+        width: 100%;
+    }
+}
+
+.login{
+    min-height: 71vh;
+    position: relative;
+    background: url(./../images/aircrafts/airbus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.login .dark{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login .dark input{
+    width: 300px;
+    height: 50px !important;
+    margin: auto;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+.login .dark input::placeholder{
+    color: #ffffff;
+}
+.login .dark input{
+    padding-left: 30px;
+    background: transparent;
+    border: 2px solid rgb(212, 105, 29);
+}
+.login .dark input:last-child{
+    background: rgb(212, 105, 29);
+    border: 2px solid rgb(212, 105, 29);
+    color: #ffffff;
+    transition: .5s;
+    padding-left: 0;
+}
+.of a:hover,
+.btn-book:hover,
+.seat .btn:hover,
+.login .dark input:last-child:hover{
+    background: transparent;
+    color: rgb(212, 105, 29);
+}
+
+
+
+.reg{
+    background: url(./../images/plan-road-trip-tips-ideas.jpg);
+    background-position: center;
+    min-height: 105vh;
+}
+.regis{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 15px;
+}
+
+
+
+.seat{
+    position: relative;
+    min-height: 205vh;
+    background: url(./../images/197152c818f021a2f4db244ec5328487.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.seat .dark{
+    flex-direction: column;
+}
+.seat h1{
+    text-align: center;
+    color: #ffffff;
+    font-size: 2rem;
+}
+.cards-seat{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-seat{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-seat .seat-1 div{
+    border: 1px solid rgb(212, 105, 29);
+    width: 75px;
+    height: 75px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+    margin: 10px;
+    color: rgb(212, 105, 29);
+    transition: .5s;
+    cursor: pointer;
+}
+.card-seat .seat-1 div:hover{
+    background: rgb(212, 105, 29);
+    color: #ffffff;
+}
+.card-seat .seat-1 div.active{
+    background: rgb(212, 105, 29);
+    color: #ffffff;
+}
+.seat .btn{
+    width: 250px;
+    margin: auto;
+    height: 50px;
+    border: 1px solid rgb(212, 105, 29);
+    margin-top: 15px;
+    background: rgb(212, 105, 29);
+    border-radius: 30px;
+    transition: .5s;
+    color: #ffffff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+
+
+.num-r{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.num-r p{
+    font-style: normal;
+}
+.num-r a{
+    border: 2px solid rgb(212, 105, 29);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #ffffff;
+    transition: .5s;
+}
+.num-r a:nth-child(2):hover,
+.num-r a:nth-child(1){
+    color: rgb(212, 105, 29);
+    background: transparent;
+}
+.num-r a:nth-child(1):hover,
+.num-r a:nth-child(2){
+    color: #fff;
+    background: rgb(212, 105, 29);
+}
+
+
+
+.booking{
+    padding: 50px 100px;
+}
+.booking form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.passagers{
+    width: 40%;
+}
+.passager{
+    border: 1px solid rgb(212, 105, 29);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    color: #000000 !important;
+    text-align: center;
+    position: relative;
+}
+.passager input{
+    border: 1px solid #000;
+    width: 100% !important;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 25px;
+    font-size: 1.3rem;
+}
+.passager input::placeholder{
+    color: #000000;
+}
+.passager p{
+    margin-top: 10px;
+}
+.remove{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(212, 105, 29);
+}
+.of a,
+.btn-book{
+    width: 250px;
+    height: 50px;
+    background-color: rgb(212, 105, 29);
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: 2px solid rgb(212, 105, 29);
+    border-radius: 30px;
+    margin: auto;
+    transition: .5s;
+    cursor: pointer;
+}
+.finality{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+.final{
+    font-size: 1.3rem;
+}
+.of a{
+    padding: 10px 40px;
+}
+
+
+
+
+@media (max-width: 800px){
+    .booking,
+    .seat .dark,
+    .login .dark,
+    .profile,
+    .nav,
+    .trust,
+    .info .dark,
+    .search .dark,
+    .message,
+    .stock,
+    .footer{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+
+
+    .card-seat{
+        width: 50%;
+        margin-top: 2rem;
+    }
+    .num-r{
+        width: 100%;
+    }
+    .search-card{
+        width: 100% !important;
+    }
+    .num-r:last-child{
+        flex-direction: column;
+    }
+    .num-r:last-child a{
+        margin-top: 10px;
+    }
+    .passagers{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .booking,
+    .seat .dark,
+    .login .dark,
+    .profile,
+    .nav,
+    .trust,
+    .info,
+    .search,
+    .message,
+    .stock,
+    .footer{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .prof-head{
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        align-items: center;
+    }
+    .prof-head h3{
+        font-size: 1.5rem;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .card-seat .seat-1 div{
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+}

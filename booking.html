@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 	<link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+	<title>Авиакомпания FlightPool</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./fontawesome-free-5.14.0-web/css/all.css">
+</head>
+<body>
+	<section class="nav">
+		<div class="logo">
+			<a href="./index.html"><img src="./logo.png" class="test-0-logo"></a>
+		</div>
+		<ul class="navigation">
+			<li><a class="test-0-nav-1" href="#">Акции</a></li>
+			<li><a class="test-0-nav-2" href="#">Поиск</a></li>
+			<li><a class="test-0-nav-1" href="#">Регистрация на рейс</a></li>
+			<li><a class="test-0-nav-4" href="#">Личный кабинет</a></li>
+		</ul>
+		<i class="fa fa-bars" onclick="menuOpen();"></i>
+	</section>
+
+	
+	<ul class="navigation-sidebar">
+		<div class="fa fa-times" onclick="menuRemove();"></div>
+		<li><a class="test-0-nav-1" href="#">Акции</a></li>
+		<li><a class="test-0-nav-2" href="#">Поиск</a></li>
+		<li><a class="test-0-nav-1" href="#">Регистрация на рейс</a></li>
+		<li><a class="test-0-nav-4" href="#">Личный кабинет</a></li>
+	</ul>
+
+	<section class="booking">
+		<form>
+			<div class="card-1-head search-card book-card">
+				<div class="num-r">
+					<p>Номер рейса</p><div class="test-5-fc">111</div>
+				</div>
+				<div class="num-r">
+					<p>Город вылета</p><div class="test-5-fcity">Екатеринбург</div>
+				</div>
+				<div class="num-r">
+					<p>Аэропорта вылета</p><div class="test-5-from">Кольцово</div>
+				</div>
+				<div class="num-r">
+					<p>Дата вылета</p><div class="test-5-dd">12.11.2021</div>
+				</div>
+				<div class="num-r">
+					<p>Время вылета</p><div class="test-5-dt">11.48.56</div>
+				</div>
+				<div class="num-r">
+					<p>Город назначения</p><div class="test-5-city">48 часов</div>
+				</div>
+				<div class="num-r">
+					<p>Аэропорт назначения</p><div class="test-5-to">Сколково</div>
+				</div>
+				<div class="num-r">
+					<p>Время прилета</p><div class="test-5-at">23.12.48</div>
+				</div>
+				<div class="num-r">
+					<p>Стоимость</p><div class="test-5-fp">50 тыс. руб</div>
+				</div>
+				<div class="num-r">
+					<button class="btn-book test-5-add">Добавить пользователя</button>
+				</div>
+			</div>
+
+			<div class="passagers">
+
+				<div class="passager">
+					<div class="pass-1">
+						<input type="text" class="test-5-name" placeholder="Имя">
+					</div>
+					<div class="pass-1">
+						<input type="text" class="test-5-last" placeholder="Фамилия">
+					</div>
+					<div class="date-2">
+						<div class="date-3">
+							<p>День</p> <input class="test-5-dob" type="number" value="1" min="1" max="31">
+						</div>
+						<div class="date-3">
+							<p>Месяц</p> <input class="test-5-dob" type="number" value="1" min="1" max="12">
+						</div>
+						<div class="date-3">
+							<p>Год</p> <input class="test-5-dob" type="number" value="2021" min="2021">
+						</div>
+					</div>
+					<div class="pass-1">
+						<input type="text"  class="test-5-doc" placeholder="Номер документа">
+					</div>
+				</div>
+				<div class="passager">
+					<div class="remove">&times;</div>
+					<div class="pass-1">
+						<input type="text" class="test-5-name" placeholder="Имя">
+					</div>
+					<div class="pass-1">
+						<input type="text" class="test-5-last" placeholder="Фамилия">
+					</div>
+					<div class="date-2">
+						<div class="date-3">
+							<p>День</p> <input class="test-5-dob" type="number" value="1" min="1" max="31">
+						</div>
+						<div class="date-3">
+							<p>Месяц</p> <input class="test-5-dob" type="number" value="1" min="1" max="12">
+						</div>
+						<div class="date-3">
+							<p>Год</p> <input class="test-5-dob" type="number" value="2021" min="2021">
+						</div>
+					</div>
+					<div class="pass-1">
+						<input type="text"  class="test-5-doc" placeholder="Номер документа">
+					</div>
+				</div>
+
+			</div>
+		</form>
+
+			<div class="finality">
+				<div class="final">Итоговая цена: 100 тыс. руб</div>
+				<div class="of"><a href="./booking_management.html">Оформить</a></div>
+			</div>
+
+	</section>
+
+	<section class="footer">
+		<ul class="footer-nav">
+			<li><a href="http://xxxxxx-m1.wsr.ru">Home</a></li>
+			<li><a href="http://xxxxxx-m1.wsr.ru">Login</a></li>
+			<li><a href="http://xxxxxx-m1.wsr.ru">Sign Up</a></li>
+			<li><a href="http://xxxxxx-m1.wsr.ru">Contact</a></li>
+			<li><a href="http://xxxxxx-m1.wsr.ru">News</a></li>
+			<li><a href="http://xxxxxx-m1.wsr.ru">Return</a></li>
+			<li><a href="http://xxxxxx-m1.wsr.ru">Feedback</a></li>
+		</ul>
+		<div class="phone">
+			<div class="test-0-phone">8(800)100-10-10</div>
+		</div>
+	</section>
+
+	<script>
+		const removeCard = document.querySelectorAll(".remove")
+		const openCard = document.querySelector(".test-5-add");
+		const passEl = document.querySelectorAll(".passager");
+		const pass = document.querySelector(".passagers");
+		const add = `
+					<div class="remove">&times;</div>
+					<div class="pass-1">
+						<input type="text" class="test-5-name" placeholder="Имя">
+					</div>
+					<div class="pass-1">
+						<input type="text" class="test-5-last" placeholder="Фамилия">
+					</div>
+					<div class="date-2">
+						<div class="date-3">
+							<p>День</p> <input class="test-5-dob" type="number" value="1" min="1" max="31">
+						</div>
+						<div class="date-3">
+							<p>Месяц</p> <input class="test-5-dob" type="number" value="1" min="1" max="12">
+						</div>
+						<div class="date-3">
+							<p>Год</p> <input class="test-5-dob" type="number" value="2021" min="2021">
+						</div>
+					</div>
+					<div class="pass-1">
+						<input type="text"  class="test-5-doc" placeholder="Номер документа">
+					</div>
+		`;
+		openCard.addEventListener("click", (e) => {
+			e.preventDefault();
+
+			addCart();
+		});
+
+		function addCart(){
+			const text = document.createElement("div");
+			text.classList.add("passager");
+			text.innerHTML = add;
+			pass.appendChild(text);
+		}
+
+		removeCard.forEach(item => {
+			item.addEventListener("click", () => {
+				passEl.forEach((e) => {
+					e.style.display = "none"
+				});
+			});
+		})
+		
+	</script>
+
+	<script src="./js/script.js"></script>
+	<script src="./fontawesome-free-5.14.0-web/js/all.js"></script>
+</body>
+</html>
